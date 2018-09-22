@@ -1,0 +1,303 @@
+
+
+
+*{
+margin:0;
+padding: 0;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont,  "San Francisco", 'Helvetica', sans-serif;
+    background-color:#f4ecff;
+    height: 100%;
+}
+
+
+/* white half of screen */
+#leftt{
+width: 50%;
+height: 100vh;
+float: left;
+background-color: #f4ecff;
+
+}
+
+/* desktop form */
+ #aform{
+     
+   text-align: center;
+    display: block;
+    margin: 25% 25% 0 25%;
+    border-radius: 6px;
+
+}
+
+#aform input{
+    box-sizing: border-box;
+    text-align: center;  
+    height: 8.3vh;
+    width:100%;
+    border: none;
+    
+}
+
+#aform #pass{
+   
+    border-top: 1px solid #eeeeee;
+}
+
+/* add rounded corners to forms */
+.cornerb{
+    border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+
+}
+
+.cornert{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+input#check {
+    height: 25px;
+    width: 25px;
+    visibility: hidden;
+}
+
+
+
+
+input::placeholder{
+   
+   color: #caaef2;
+    font-size: 1.2em;
+   font-weight: bold;
+ 
+}
+
+/* set  style for button elements */
+#buttonload {
+    display:none;
+    color: white;
+    background-color:#7e24fa;
+    border: none;
+    height: 8.3vh;
+    width:100%;
+}
+/* loading image */
+#buttonload svg{
+    height: 85%;
+    fill: white;
+}
+
+#buttonload1 svg{
+    height: 85%;
+    fill: white;
+}
+
+
+.logbutton {
+    margin: 0 10% 0 10%;
+    display:none;
+    color: white;
+    background-image:none;
+    background-color:#7E24FA;
+    border: none;
+    height: 8.3%;
+    width:80%;
+    
+}
+
+/* desktop submit input styling */
+#submit1 {
+    color: white;
+    background-color:#7e24fa;
+    border: none;
+    
+    
+}
+/*box shadow */
+.shadow{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 4px 25px -19px #888888;
+}
+
+#remember {
+    color: #6624d2;
+    font-weight: bold;
+    display: inline;
+}
+#remember1 {
+    color: #6624d2;
+    font-weight: bold;
+    
+}
+
+/* checkbox margins */
+#check {
+margin-top:10vh;
+margin-bottom: 10vh;
+} 
+
+/* custom check box styling */
+#check.input {
+    display: none; /* hide the default checkbox */
+  }
+  
+  /* create substitute check box*/
+  span#check {
+    height: 26px;
+    width: 26px;
+    border: 1px solid grey;
+    display: inline-block;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    text-align:left;
+  }
+
+  /* box to hold error messages */
+  #errors, #errors2{
+color:red;
+font-weight: 450;
+  }
+  .errorbox{
+    border:2px solid red;
+    border-radius: 2px;
+  }
+
+  /* give checked state fill color */
+  #check:checked + span:after {
+    content:"";
+    
+    background-color: #6624d2;
+    margin: 3px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+   
+
+  }
+  
+
+
+#rightt{
+   
+    text-align:center;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    color: #f4ecff;
+    background-image: linear-gradient(45deg, #6624d2, #7e24fa,#8456ff);
+    
+
+}
+/* responsive form element small screen */
+#invisaform{
+    display: none;
+    text-align: center;
+    margin-top: 10%;
+    position: absolute;
+    bottom: 50%;
+    width: 80%;
+    left: 10%;
+}
+
+ 
+ #invisaform input, #pass, #username{
+     box-sizing: border-box;
+     text-align: center;  
+     height: 12%;
+     width:100%;
+     border: none;
+ }
+ 
+ #invisaform #pass{
+     border-top: 1px solid #eeeeee;
+ }
+
+
+/* sign in screen desktop */
+#congrats1{
+    
+    display:none;
+    text-align:center;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    color: #f4ecff;
+    background-image: linear-gradient(-45deg, #6624d2, #7e24fa,#8456ff);
+
+}
+#congrats1 h1{
+margin-top: 20%;
+}
+
+/* sign in screen mobile */
+
+#congrats2{
+    display:none;
+}
+
+/* social link icons */
+#bot svg{
+    height: 3vh;
+    fill: #6624d2;
+    background-color:#e4d2ff;
+    padding: 1vh;
+    -moz-border-radius: 70px; 
+   -webkit-border-radius: 70px; 
+   border-radius: 70px;
+}
+
+/* container for social links */
+#bot {
+    font-weight: bold;
+    color: #6624d2;
+    text-align: center;
+  margin-top: 0;
+}
+
+#SvgLogoAcmeStack {
+width: 5vw;
+background-color:#f4ecff;
+padding: 3px;
+border-radius: 11px;
+border: 2px solid #caaef2;
+}
+
+#container{
+    margin-top: 20%;
+}
+
+/* congratulation screen styles */
+#congrats{
+    display:none;
+}
+
+/* signout button style */
+.signout{ 
+    margin-top: 33%;
+border: none;
+border-radius: 15px;
+width: 29%;
+height:4.5vh;
+color:#7e24fa;
+background-color:#f4ecff;
+}
+
+.h1con{
+    margin-top: 25%;
+}
+/* set responsive form elements display state */
+.invisa{
+    display: none;
+}
+
+/* class will be added and removed with jquery to give border to errors */
+.errorred {
+    border: 2px solid red !important;
+
+}

@@ -1,0 +1,127 @@
+<!-- Coded By David Zak-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="acmestyle/style.css">
+<link rel="stylesheet" type="text/css" href="acmestyle/media.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="acmejavascript/index.js"></script>
+</head>
+<body onresize="checkWidth()">
+  <!-- white panel-->
+<div id="leftt">
+
+<!-- Submit Button for Responsive form, visible only small screeen-->
+    
+      <button type="submit" form="invisaform"  id="invisadefault" value="Submit" class="logbutton invisa cornerb"> login </button>
+      <button type="submit" form="invisaform"  id="buttonload1" value="Submit" class="logbutton invisa">
+      <svg id="SvgIconLoading" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+        <path d="M8 .504c-4.411 0-8 3.589-8 8a8.03 8.03 0 0 0 3.999 6.929.471.471 0 0 0 .472-.814A7.084 7.084 0 0 1 .942 8.505c0-3.892 3.166-7.059 7.059-7.059s7.059 3.166 7.059 7.059a7.085 7.085 0 0 1-3.528 6.114.47.47 0 1 0 .47.814A8.03 8.03 0 0 0 16 8.504c0-4.411-3.589-8-8-8z"/>
+      </svg></button>
+     <div id="errors2" class="invisa"></div> 
+      <br>
+      <section id="centcontainer" class="invisa">
+      <label for="check1">
+      <input  id="check1" name="check1" type="checkbox"  class="invisa">
+      <span id="check1"  class="invisa"></span>
+      </label>
+
+      <p id="remember1" class="invisa">remember me</p> 
+      </section>
+   
+
+
+<!-- form start Desktop view-->
+  <form name="aform" id="aform" method="post"  action="" onsubmit='return validate();' >
+  
+    <!-- drop shadow div-->
+    <div class="shadow"> 
+  <input name="username" id="username" placeholder="username" class="cornert">
+  <br>
+  <input name="pass" id="pass" placeholder="password">
+  <br>
+  <input name="submit" type="submit" id="submit1" value="login" class="cornerb">
+  <button type="submit" form="aform"  id="buttonload" value="Submit" class="cornerb">
+
+      <!-- Icon: Loading-->
+  <svg id="SvgIconLoading" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+      <path d="M8 .504c-4.411 0-8 3.589-8 8a8.03 8.03 0 0 0 3.999 6.929.471.471 0 0 0 .472-.814A7.084 7.084 0 0 1 .942 8.505c0-3.892 3.166-7.059 7.059-7.059s7.059 3.166 7.059 7.059a7.085 7.085 0 0 1-3.528 6.114.47.47 0 1 0 .47.814A8.03 8.03 0 0 0 16 8.504c0-4.411-3.589-8-8-8z"/>
+    </svg>
+  </button>
+  </div>
+  <div id="errors"></div>
+  <br>
+  <label for="check">
+  <input  id="check" name="check" type="checkbox"> <span id="check"></span>
+  </label>
+
+  <p id="remember">remember me</p>
+  </form>
+    <div id="bot">
+            <p><i>or login with</i></p>
+            <br>
+    <!-- Logo: Google-->
+    <svg id="SvgLogoGoogle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+        <path d="M15.636 6.545H8.182v3.091h4.291c-.4 1.964-2.073 3.091-4.291 3.091-2.618 0-4.727-2.109-4.727-4.727s2.109-4.727 4.727-4.727c1.127 0 2.145.4 2.945 1.055L13.455 2C12.037.764 10.219 0 8.182 0c-4.436 0-8 3.564-8 8s3.564 8 8 8c4 0 7.636-2.909 7.636-8 0-.473-.073-.982-.182-1.455z"/>
+      </svg>
+      
+    <!-- Logo: Facebook-->
+    <svg id="SvgLogoFacebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+        <path d="M12.501 3.002h-1.999c-.302 0-.999.474-.999.999V6h2.998v3.002H9.499V16H6.497V9.001H3.499V6h2.998V4.001C6.497 1.797 8.459 0 10.562 0h1.939v3.002z"/>
+      </svg>
+      
+      <!-- Logo: Twitter-->
+    <svg id="SvgLogoTwitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+        <path d="M16 3.037a6.54 6.54 0 0 1-1.885.516 3.295 3.295 0 0 0 1.443-1.816 6.56 6.56 0 0 1-2.084.797 3.286 3.286 0 0 0-5.595 2.993 9.318 9.318 0 0 1-6.766-3.428 3.286 3.286 0 0 0 1.016 4.382A3.267 3.267 0 0 1 .64 6.07v.041a3.284 3.284 0 0 0 2.633 3.218c-.483.132-.99.151-1.482.057a3.288 3.288 0 0 0 3.067 2.28A6.594 6.594 0 0 1 0 13.027a9.291 9.291 0 0 0 5.032 1.472v.001c6.038 0 9.34-5.002 9.34-9.34 0-.142 0-.284-.009-.424A6.694 6.694 0 0 0 16 3.037z"/>
+      </svg>
+      
+
+    </div>
+</div> 
+
+
+ <!-- Purple half right login screen -->
+<div id="rightt">
+    <div id="container">
+    <h1>Acme Stack</h1>
+    <br>
+   <!-- Logo: AcmeStack-->
+<svg id="SvgLogoAcmeStack" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 44">
+    <defs>
+      <linearGradient id="SvgLogoAcmeStackGradient" x1="6.725" x2="37.275" y1="37.279" y2="6.729" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#7e24fa"/>
+        <stop offset="1" stop-color="#caaef2"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#SvgLogoAcmeStackGradient)" d="M44 22.007a2.928 2.928 0 0 0-1.477-2.56l-1.911-1.104 1.909-1.102c.926-.534 1.479-1.49 1.479-2.559s-.552-2.025-1.477-2.56L23.482 1.121a2.961 2.961 0 0 0-2.956-.001L1.478 12.117A2.926 2.926 0 0 0 0 14.677c0 1.069.552 2.026 1.478 2.56l1.91 1.103-1.911 1.103A2.923 2.923 0 0 0 0 22.001c0 1.068.552 2.025 1.478 2.56l1.91 1.102-1.91 1.103A2.929 2.929 0 0 0 0 29.326c0 1.069.552 2.026 1.478 2.56l19.05 10.994a2.953 2.953 0 0 0 2.954-.001L42.521 31.89A2.922 2.922 0 0 0 44 29.332a2.928 2.928 0 0 0-1.477-2.56l-1.911-1.104 1.909-1.102A2.925 2.925 0 0 0 44 22.007zM21.991 3.702L41.032 14.66 22.005 25.642 7.328 17.205a1.467 1.467 0 0 0-.456-.262l-3.904-2.244L21.991 3.702zm19.041 25.607L22.017 40.298 2.968 29.349l3.401-1.964 14.159 8.172a2.963 2.963 0 0 0 2.954-.001l14.156-8.171 3.394 1.924zm-19.015 3.665L7.329 24.53a1.488 1.488 0 0 0-.458-.263l-3.903-2.243L6.37 20.06l14.158 8.171a2.953 2.953 0 0 0 2.954-.001l14.156-8.171 3.393 1.925-19.014 10.99z"/>
+  </svg>
+  <div  id="congrats2">
+      <h1 class="h1con">Congratulations</h1>
+      <h5> You have successfully logged in.</h5>
+      <a href="index.html"> <button class="signout"> Sign Out</button> </a>
+     </div>
+   
+  </div>
+<!-- Responsive form only visible on phones and small screens-->
+
+<form id="invisaform" name="invisaform" action="" method="POST" onsubmit='return validate2();'>
+<input id="username1" name="username1" placeholder="username" class="cornert">
+<input name="pass1" id="pass1" placeholder="password">
+<!-- Submit buttom linked outside of form with javascript for more responsive layout-->
+</form>
+
+  </div>
+
+<!-- Congratulations Screen Desktop - Hidden before form submit-->
+  <div  id="congrats1">
+       <h1 id="h1con">Congratulations</h1>
+       <h5> You have successfully logged in.</h5>
+       <a href="index.html"> <button class="signout"> Sign Out</button> </a>
+      </div>
+    
+
+</body>
+
+</html>

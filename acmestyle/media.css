@@ -1,0 +1,156 @@
+/* code by David Zak */
+
+
+/* responsive css changes small screen size */
+@media (max-width: 550px){
+/* white half take up full width and half height */
+ #leftt {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+
+/* purple logo half take up full width and half screen */
+div#rightt {
+        height: 50vh;
+        width: 100%;
+        background-image:none;
+        background-color:#7E24FA
+       
+    }
+
+/* styling for congratulations screen desktop */
+
+div#congrats1{
+    width: 100%;
+    height: 50%;
+    background-image:none;
+    background-color:#7E24FA
+   
+
+}
+/* responsive button style */
+.logbutton{
+    display: block;
+}
+
+#buttonload1{
+    display:none;
+}
+
+
+#container{
+    margin-top: 10%;
+}
+/* main logo */
+#SvgLogoAcmeStack{
+    width: 16vw;
+
+}
+
+/* desktop form hide */
+#aform {
+    display: none;
+}
+
+/* mobile form display */
+#invisaform{
+display: block;
+text-align: center;
+}
+
+#invisaform input, #pass, #username, .logbutton{
+height: 5vh;
+
+}
+
+/* styling for mobile checkbox*/ 
+input#check1 {
+    height: 0px;
+    width: 0px;
+    display:none;
+}
+
+
+
+    
+    /* custom check box styling */
+    #check1.input {
+        display: none; /* hide the default checkbox */
+      }
+      
+      /* create substitute check box*/
+      span#check1 {
+        height: 26px;
+        width: 26px;
+        border: 1px solid grey;
+        display: inline-block;
+        position: relative;
+        padding: 0px;
+        margin: 0px 0 0 20%;
+        text-align:left;
+      }
+
+      /* give checked state fill color */
+  #check1:checked + span:after {
+    content:"";
+    background-color: #6624d2;
+    margin: 3px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+
+#centcontainer{
+    margin-top: 10%;
+}
+
+#centcontainer invisa, #centcontainer label{
+display:inline;
+}
+
+.invisa{
+    display: block;
+}
+
+#remember1 {
+    display:inline;
+}
+
+/* part of white half holds social links and text */
+#bot{
+    margin-top: 20%;
+    margin-bottom: 8%;
+
+}
+/* adds shadow to button elements */
+.cornerb{
+   
+box-shadow: 0 4px 25px -5px #888888;
+}
+
+/* signout button styling */
+.signout{
+    width: 40%;
+    height:4.7vh;
+    font-weight: bold;
+}
+
+
+}
+
+/* small change to prevent overflow on small screens */
+@media(max-width: 245px){
+
+    #centcontainer{
+        font-size: .8em;
+        margin-top: 6%;
+    }
+
+    #bot{
+        margin-bottom: 10%;
+    }
+
+
+}
+
